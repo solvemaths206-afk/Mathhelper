@@ -165,7 +165,15 @@ copyBtn.addEventListener("click", async () => {
 
 });
 pdfBtn.addEventListener("click", () => {
+askBtn.addEventListener("click", () => {
 
+    if (!followUp.value.trim()) {
+        alert("Please type a follow-up question.");
+        return;
+    }
+
+    answer.innerHTML = "💬 Follow-up feature coming in the next step...";
+});
     const text = answer.innerText.trim();
 
     if (!text) {
