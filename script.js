@@ -32,7 +32,10 @@ button.addEventListener("click", async () => {
         return;
     }
 const startTime = Date.now();
-    answer.innerHTML = "🤖 AI is analyzing...";
+    answer.innerHTML = `
+<div class="loader"></div>
+<p>🤖 AI is analyzing your question...</p>
+`;
 
     let image = null;
 
