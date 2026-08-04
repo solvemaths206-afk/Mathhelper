@@ -172,7 +172,7 @@ askBtn.addEventListener("click", () => {
         return;
     }
 
-    answer.innerHTML = "💬 Follow-up feature coming in the next step...";
+    answer.innerHTML += `<hr><p><strong>💬 Your Question:</strong> ${followUp.value}</p>`;
 });
     const text = answer.innerText.trim();
 
