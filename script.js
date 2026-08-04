@@ -4,6 +4,7 @@ const textarea = document.querySelector("textarea");
 const imageInput = document.getElementById("imageInput");
 const mode = document.getElementById("mode");
 const grade = document.getElementById("grade");
+const subject = document.getElementById("subject");
 const previewContainer = document.getElementById("previewContainer");
 const previewImage = document.getElementById("previewImage");
 
