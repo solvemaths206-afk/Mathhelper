@@ -1,5 +1,6 @@
 const button = document.getElementById("solveBtn");
 const clearBtn = document.getElementById("clearBtn");
+const copyBtn = document.getElementById("copyBtn");
 const answer = document.getElementById("answer");
 const textarea = document.querySelector("textarea");
 const imageInput = document.getElementById("imageInput");
