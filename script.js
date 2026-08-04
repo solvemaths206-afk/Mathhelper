@@ -173,6 +173,7 @@ const lastAnswer = localStorage.getItem("lastAnswer");
     }
 
     answer.innerHTML += `<hr><p><strong>💬 Your Question:</strong> ${followUp.value}</p>`;
+const followUpQuestion = followUp.value.trim();
 });
     const text = answer.innerText.trim();
 
