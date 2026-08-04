@@ -71,7 +71,7 @@ history.unshift({
 localStorage.setItem("mathHistory", JSON.stringify(history.slice(0, 20))); 
         answer.innerHTML = data.answer
     .replace(/\n/g, "<br>");    
-    if (window.renderMathInElement) {
+
             renderMathInElement(answer, {
     delimiters: [
         { left: "$$", right: "$$", display: true },
