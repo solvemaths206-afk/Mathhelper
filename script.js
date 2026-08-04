@@ -15,7 +15,7 @@ button.addEventListener("click", async () => {
 
     try {
 
-        const response = await fetch("/api/solve", {
+        const response = await fetch("https://mathhelper-rose.vercel.app/api/solve", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
