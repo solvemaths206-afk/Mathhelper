@@ -144,3 +144,23 @@ copyBtn.addEventListener("click", async () => {
     }, 2000);
 
 });
+pdfBtn.addEventListener("click", () => {
+
+    const text = answer.innerText.trim();
+
+    if (!text) {
+        alert("No answer to download.");
+        return;
+    }
+
+    const { jsPDF } = window.jspdf;
+
+    const doc = new jsPDF();
+
+    const lines = doc.splitTextToSize(text, 180);
+
+    doc.text(lines, 15, 20);
+
+    doc.save("MathHelper-Solution.pdf");
+
+});
