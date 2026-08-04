@@ -48,12 +48,11 @@ Keep each step short.
 Assume the student is learning this topic for the first time.
 Avoid difficult words.
 
-
-
 Question:
 
-${question}`
-  Format your answer exactly like this:
+${question}
+
+Format your answer exactly like this:
 
 📝 Question
 
@@ -65,7 +64,9 @@ ${question}`
 
 ✅ Final Answer
 
-💡 Easy Tip
+💡 Easy Tip`
+
+
       });
     }
 
