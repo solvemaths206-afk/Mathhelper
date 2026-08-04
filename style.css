@@ -316,3 +316,15 @@ footer{
     line-height:1.8;
     white-space:pre-wrap;
 }
+.image-upload{
+    margin:15px 0;
+}
+
+.image-upload input{
+    width:100%;
+    padding:12px;
+    border:2px dashed #2563eb;
+    border-radius:10px;
+    background:#f8fbff;
+    cursor:pointer;
+}
