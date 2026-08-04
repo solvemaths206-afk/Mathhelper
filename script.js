@@ -2,7 +2,19 @@ const button = document.getElementById("solveBtn");
 const answer = document.getElementById("answer");
 const textarea = document.querySelector("textarea");
 const imageInput = document.getElementById("imageInput");
+const previewContainer = document.getElementById("previewContainer");
+const previewImage = document.getElementById("previewImage");
 
+imageInput.addEventListener("change", () => {
+
+    const file = imageInput.files[0];
+
+    if (!file) return;
+
+    previewImage.src = URL.createObjectURL(file);
+    previewContainer.style.display = "block";
+
+});
 button.addEventListener("click", async () => {
 
     const question = textarea.value.trim();
