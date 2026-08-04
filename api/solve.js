@@ -11,7 +11,7 @@ if (req.method === "OPTIONS") {
   }
 
   try {
-    const { question, image } = req.body;
+    const { question, image, mode, grade } = req.body;
 
     const parts = [];
 
