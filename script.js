@@ -51,6 +51,15 @@ button.addEventListener("click", async () => {
         const data = await response.json();
 
         if (data.answer) {
+          const history = JSON.parse(localStorage.getItem("mathHistory")) || [];
+
+history.unshift({
+    question,
+    answer: data.answer,
+    time: new Date().toLocaleString()
+});
+
+localStorage.setItem("mathHistory", JSON.stringify(history.slice(0, 20))); 
             answer.innerHTML = data.answer.replace(/\n/g, "<br>");
         } else {
             answer.innerHTML = "❌ " + (data.error || "Unknown error");
