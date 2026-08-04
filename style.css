@@ -328,3 +328,14 @@ footer{
     background:#f8fbff;
     cursor:pointer;
 }
+#previewContainer{
+    display:none;
+    margin-top:15px;
+    text-align:center;
+}
+
+#previewImage{
+    max-width:100%;
+    border-radius:12px;
+    border:2px solid #ddd;
+}
