@@ -53,6 +53,7 @@ button.addEventListener("click", async () => {
     mode: mode.value,
     grade: grade.value,
 subject: subject.value
+studentName: studentName.value
             })
         });
 
