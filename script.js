@@ -69,8 +69,9 @@ history.unshift({
 });
 
 localStorage.setItem("mathHistory", JSON.stringify(history.slice(0, 20))); 
-        answer.innerHTML = data.answer
-    .replace(/\n/g, "<br>");    
+       answer.innerHTML =
+    data.answer.replace(/\n/g, "<br>") +
+    `<br><br><small>⚡ Solved in ${((endTime - startTime) / 1000).toFixed(2)} seconds</small>`; 
 
           const endTime = Date.now();
             renderMathInElement(answer, {
