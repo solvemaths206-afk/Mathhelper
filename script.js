@@ -125,3 +125,21 @@ clearBtn.addEventListener("click", () => {
 
     answer.innerHTML = "Your step-by-step solution will appear here...";
 });
+copyBtn.addEventListener("click", async () => {
+
+    const text = answer.innerText.trim();
+
+    if (!text) {
+        alert("No answer to copy.");
+        return;
+    }
+
+    await navigator.clipboard.writeText(text);
+
+    copyBtn.innerText = "✅ Copied!";
+
+    setTimeout(() => {
+        copyBtn.innerText = "📋 Copy Answer";
+    }, 2000);
+
+});
