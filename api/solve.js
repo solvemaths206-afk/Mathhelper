@@ -12,7 +12,24 @@ if (req.method === "OPTIONS") {
 
   try {
     const { question, image, mode, grade } = req.body;
+let prompt = "";
 
+switch (mode) {
+  case "exam":
+    prompt = "Solve exactly as in an exam. Show concise steps.";
+    break;
+
+  case "quick":
+    prompt = "Give only the final answer with a short explanation.";
+    break;
+
+  case "practice":
+    prompt = "Solve the question, then generate 3 similar practice questions.";
+    break;
+
+  default:
+    prompt = "Explain like a friendly teacher with clear step-by-step explanations.";
+}
     const parts = [];
 
     if (question) {
