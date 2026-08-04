@@ -72,7 +72,7 @@ history.unshift({
     answer: data.answer,
     time: new Date().toLocaleString()
 });
-
+localStorage.setItem("lastAnswer", data.answer);
 localStorage.setItem("mathHistory", JSON.stringify(history.slice(0, 20))); 
        answer.innerHTML =
     data.answer.replace(/\n/g, "<br>") +
