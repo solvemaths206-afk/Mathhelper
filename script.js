@@ -47,7 +47,7 @@ button.addEventListener("click", async () => {
     question,
     image,
     mode: mode.value,
-    grade: grade.value
+    grade: grade.value,
 subject: subject.value
             })
         });
