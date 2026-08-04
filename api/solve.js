@@ -1,16 +1,29 @@
 module.exports = async function handler(req, res) {
   if (req.method !== "POST") {
-    return res.status(405).json({
-      error: "Method not allowed"
-    });
+    return res.status(405).json({ error: "Method not allowed" });
   }
 
   try {
-    const { question } = req.body;
+    const { question, image } = req.body;
 
-    if (!question) {
-      return res.status(400).json({
-        error: "Question is required"
+    const parts = [];
+
+    if (question) {
+      parts.push({
+        text: `Solve this math problem step by step:\n\n${question}`
+      });
+    }
+
+    if (image) {
+      parts.push({
+        inlineData: {
+          mimeType: "image/jpeg",
+          data: image
+        }
+      });
+
+      parts.push({
+        text: "Read the math question from this image and solve it step by step."
       });
     }
 
@@ -24,11 +37,7 @@ module.exports = async function handler(req, res) {
         body: JSON.stringify({
           contents: [
             {
-              parts: [
-                {
-                  text: `You are a professional mathematics tutor. Solve this problem step by step and give only the final mathematical explanation.\n\nQuestion:\n${question}`
-                }
-              ]
+              parts
             }
           ]
         })
@@ -37,9 +46,6 @@ module.exports = async function handler(req, res) {
 
     const data = await response.json();
 
-    console.log("Gemini Response:");
-    console.log(JSON.stringify(data, null, 2));
-
     if (!response.ok) {
       return res.status(response.status).json(data);
     }
@@ -47,20 +53,11 @@ module.exports = async function handler(req, res) {
     const answer =
       data.candidates?.[0]?.content?.parts?.[0]?.text;
 
-    if (!answer) {
-      return res.status(500).json({
-        error: "No answer returned from Gemini",
-        data
-      });
-    }
-
     return res.status(200).json({
-      answer
+      answer: answer || "No answer returned."
     });
 
   } catch (err) {
-    console.error(err);
-
     return res.status(500).json({
       error: err.message
     });
