@@ -114,3 +114,13 @@ historyBtn.addEventListener("click", () => {
         ? "block"
         : "none";
 });
+clearBtn.addEventListener("click", () => {
+
+    textarea.value = "";
+    imageInput.value = "";
+
+    previewContainer.style.display = "none";
+    previewImage.src = "";
+
+    answer.innerHTML = "Your step-by-step solution will appear here...";
+});
