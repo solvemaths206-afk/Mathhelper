@@ -2,6 +2,7 @@ const button = document.getElementById("solveBtn");
 const answer = document.getElementById("answer");
 const textarea = document.querySelector("textarea");
 const imageInput = document.getElementById("imageInput");
+const mode = document.getElementById("mode");
 const previewContainer = document.getElementById("previewContainer");
 const previewImage = document.getElementById("previewImage");
 
@@ -41,9 +42,10 @@ button.addEventListener("click", async () => {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                question,
-                image
-            })
+    question,
+    image,
+    mode: mode.value
+})
         });
 
         const data = await response.json();
