@@ -166,7 +166,7 @@ copyBtn.addEventListener("click", async () => {
 });
 pdfBtn.addEventListener("click", () => {
 askBtn.addEventListener("click", () => {
-
+const lastAnswer = localStorage.getItem("lastAnswer");
     if (!followUp.value.trim()) {
         alert("Please type a follow-up question.");
         return;
