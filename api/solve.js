@@ -35,7 +35,7 @@ switch (mode) {
     if (question) {
       parts.push({
         text: `You are teaching a ${grade} student.
-
+The subject is ${subject}.
 ${prompt}
 
 Solve this math problem step by step:
