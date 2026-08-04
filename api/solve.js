@@ -53,6 +53,19 @@ Avoid difficult words.
 Question:
 
 ${question}`
+  Format your answer exactly like this:
+
+📝 Question
+
+📖 Step 1
+
+📖 Step 2
+
+📖 Step 3
+
+✅ Final Answer
+
+💡 Easy Tip
       });
     }
 
