@@ -31,7 +31,7 @@ button.addEventListener("click", async () => {
         answer.innerHTML = "Please enter a question or upload an image.";
         return;
     }
-
+const startTime = Date.now();
     answer.innerHTML = "🤖 AI is analyzing...";
 
     let image = null;
