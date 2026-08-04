@@ -45,7 +45,8 @@ button.addEventListener("click", async () => {
             body: JSON.stringify({
     question,
     image,
-    mode: mode.value
+    mode: mode.value,
+    grade: grade.value
 })
         });
 
