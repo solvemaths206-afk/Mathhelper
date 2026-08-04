@@ -9,6 +9,8 @@ const mode = document.getElementById("mode");
 const grade = document.getElementById("grade");
 const subject = document.getElementById("subject");
 const studentName = document.getElementById("studentName");
+const followUp = document.getElementById("followUp");
+const askBtn = document.getElementById("askBtn");
 const previewContainer = document.getElementById("previewContainer");
 const previewImage = document.getElementById("previewImage");
 
