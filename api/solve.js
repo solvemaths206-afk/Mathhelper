@@ -17,7 +17,13 @@ if (req.method === "OPTIONS") {
 
     if (question) {
       parts.push({
-        text: `Solve this math problem step by step:\n\n${question}`
+        text: `You are teaching a ${grade} student.
+
+${prompt}
+
+Solve this math problem step by step:
+
+${question}`
       });
     }
 
