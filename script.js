@@ -80,7 +80,11 @@ localStorage.setItem("mathHistory", JSON.stringify(history.slice(0, 20)));
     throwOnError: false
 });
         } else {
-            answer.innerHTML = "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
+           if (data.error?.code === 429) {
+    answer.innerHTML = "⚠️ Daily AI limit reached. Please try again later.";
+} else {
+    answer.innerHTML = "❌ " + (data.error?.message || "Unknown error");
+           } 
         }
 
     } catch (err) {
