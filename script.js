@@ -84,3 +84,26 @@ function toBase64(file) {
         reader.readAsDataURL(file);
     });
 }
+const historyBtn = document.getElementById("historyBtn");
+const historyBox = document.getElementById("historyBox");
+
+historyBtn.addEventListener("click", () => {
+
+    const history = JSON.parse(localStorage.getItem("mathHistory")) || [];
+
+    historyBox.innerHTML = "";
+
+    history.forEach(item => {
+
+        historyBox.innerHTML += `
+        <div class="history-item">
+            <strong>${item.question}</strong><br>
+            <small>${item.time}</small>
+        </div>`;
+    });
+
+    historyBox.style.display =
+        historyBox.style.display === "none"
+        ? "block"
+        : "none";
+});
