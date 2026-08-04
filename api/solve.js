@@ -11,7 +11,7 @@ if (req.method === "OPTIONS") {
   }
 
   try {
-    const { question, image, mode, grade } = req.body;
+    const { question, image, mode, grade, subject } = req.body;
 let prompt = "";
 
 switch (mode) {
