@@ -1,4 +1,5 @@
 const button = document.getElementById("solveBtn");
+const clearBtn = document.getElementById("clearBtn");
 const answer = document.getElementById("answer");
 const textarea = document.querySelector("textarea");
 const imageInput = document.getElementById("imageInput");
