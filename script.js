@@ -68,8 +68,14 @@ history.unshift({
 
 localStorage.setItem("mathHistory", JSON.stringify(history.slice(0, 20))); 
         answer.innerHTML = data.answer
-    .replace(/\$/g, "")
     .replace(/\n/g, "<br>");    
+      renderMathInElement(answer, {
+    delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false }
+    ],
+    throwOnError: false
+});
         } else {
             answer.innerHTML = "❌ " + (data.error || "Unknown error");
         }
