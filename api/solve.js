@@ -12,7 +12,9 @@ if (req.method === "OPTIONS") {
 
   try {
     const { question, image, mode, grade, subject } = req.body;
-let prompt = "";
+console.log("Subject:", subject);
+console.log("Grade:", grade);
+   let prompt = "";
 
 switch (mode) {
   case "exam":
