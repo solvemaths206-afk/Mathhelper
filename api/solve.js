@@ -37,7 +37,7 @@ switch (mode) {
     if (question) {
       parts.push({
         text:`You are an expert ${subject} teacher.
-
+${studentName ? `The student's name is ${studentName}. Greet them once at the beginning.` : ""}
 Teach a ${grade} student.
 
 ${prompt}
