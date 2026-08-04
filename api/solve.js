@@ -7,8 +7,7 @@ module.exports = async function handler(req, res) {
     const { question } = req.body;
 
     const response = await fetch(
-  `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`,
-  {
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`,
       {
         method: "POST",
         headers: {
@@ -29,14 +28,22 @@ module.exports = async function handler(req, res) {
     );
 
     const data = await response.json();
-console.log(JSON.stringify(data));
+
+    console.log(JSON.stringify(data));
+
+    if (!response.ok) {
+      return res.status(response.status).json(data);
+    }
+
     const answer =
       data.candidates?.[0]?.content?.parts?.[0]?.text ||
       "Sorry, I couldn't generate an answer.";
 
-    res.status(200).json({ answer });
+    return res.status(200).json({ answer });
 
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    return res.status(500).json({
+      error: error.message,
+    });
   }
-}
+};
