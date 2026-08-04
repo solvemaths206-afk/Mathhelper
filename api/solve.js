@@ -36,7 +36,7 @@ switch (mode) {
 
     if (question) {
       parts.push({
-        text: You are an expert ${subject} teacher.
+        text:`You are an expert ${subject} teacher.
 
 Teach a ${grade} student.
 
