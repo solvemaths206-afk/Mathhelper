@@ -80,7 +80,7 @@ localStorage.setItem("mathHistory", JSON.stringify(history.slice(0, 20)));
     throwOnError: false
 });
         } else {
-            answer.innerHTML = "❌ " + (data.error || "Unknown error");
+            answer.innerHTML = "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
         }
 
     } catch (err) {
