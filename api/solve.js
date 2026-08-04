@@ -48,10 +48,7 @@ Keep each step short.
 Assume the student is learning this topic for the first time.
 Avoid difficult words.
 
-Answer this ${subject} question for a ${grade} student.
 
-Follow this instruction:
-${prompt}
 
 Question:
 
