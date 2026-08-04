@@ -62,7 +62,9 @@ history.unshift({
 });
 
 localStorage.setItem("mathHistory", JSON.stringify(history.slice(0, 20))); 
-            answer.innerHTML = data.answer.replace(/\n/g, "<br>");
+        answer.innerHTML = data.answer
+    .replace(/\$/g, "")
+    .replace(/\n/g, "<br>");    
         } else {
             answer.innerHTML = "❌ " + (data.error || "Unknown error");
         }
