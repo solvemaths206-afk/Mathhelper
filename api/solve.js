@@ -30,7 +30,23 @@ if (req.method === "OPTIONS") {
       });
 
       parts.push({
-        text: "Read the math question from this image and solve it step by step."
+        text: `You are an expert math teacher.
+
+Read the math problem from the uploaded image.
+
+Format your answer exactly like this:
+
+📝 Question
+
+📖 Step 1
+
+📖 Step 2
+
+📖 Step 3
+
+✅ Final Answer
+
+Explain in simple English.`
       });
     }
 
