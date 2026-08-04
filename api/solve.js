@@ -38,7 +38,12 @@ switch (mode) {
 The subject is ${subject}.
 ${prompt}
 
-Solve this math problem step by step:
+Answer this ${subject} question for a ${grade} student.
+
+Follow this instruction:
+${prompt}
+
+Question:
 
 ${question}`
       });
