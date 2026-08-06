@@ -35,7 +35,23 @@ switch (mode) {
     prompt = "Explain like a friendly teacher with clear step-by-step explanations.";
 }
     const parts = [];
+if (followUpQuestion && lastAnswer) {
+    parts.push({
+        text: `You are an expert ${subject} teacher.
 
+Teach a ${grade} student.
+
+This was your previous answer:
+
+${lastAnswer}
+
+The student is now asking this follow-up question:
+
+${followUpQuestion}
+
+Answer only the follow-up question in very simple English.`
+    });
+}
     if (question) {
       parts.push({
         text:`You are an expert ${subject} teacher.
