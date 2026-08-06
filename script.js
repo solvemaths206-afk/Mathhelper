@@ -171,7 +171,10 @@ const lastAnswer = localStorage.getItem("lastAnswer");
         alert("Please type a follow-up question.");
         return;
     }
-
+if (!lastAnswer) {
+    alert("Please solve a question first.");
+    return;
+}
     answer.innerHTML += `<hr><p><strong>💬 Your Question:</strong> ${followUp.value}</p>`;
 const followUpQuestion = followUp.value.trim();
 });
