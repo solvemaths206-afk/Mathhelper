@@ -190,7 +190,15 @@ const response = await fetch("https://mathhelper-rose.vercel.app/api/solve", {
         grade: grade.value
     })
 });
-});
+const data = await response.json();
+
+if (data.answer) {
+    answer.innerHTML += `<p><strong>🤖 AI:</strong></p>`;
+    answer.innerHTML += data.answer.replace(/\n/g, "<br>");
+} else {
+    answer.innerHTML += `<p>❌ ${data.error?.message || "Unable to answer."}</p>`;
+}
+   });
     const text = answer.innerText.trim();
 
     if (!text) {
