@@ -2,17 +2,23 @@ const button = document.getElementById("solveBtn");
 const clearBtn = document.getElementById("clearBtn");
 const copyBtn = document.getElementById("copyBtn");
 const pdfBtn = document.getElementById("pdfBtn");
+const askBtn = document.getElementById("askBtn");
+
 const answer = document.getElementById("answer");
 const textarea = document.querySelector("textarea");
+
 const imageInput = document.getElementById("imageInput");
+const previewContainer = document.getElementById("previewContainer");
+const previewImage = document.getElementById("previewImage");
+
 const mode = document.getElementById("mode");
 const grade = document.getElementById("grade");
 const subject = document.getElementById("subject");
 const studentName = document.getElementById("studentName");
 const followUp = document.getElementById("followUp");
-const askBtn = document.getElementById("askBtn");
-const previewContainer = document.getElementById("previewContainer");
-const previewImage = document.getElementById("previewImage");
+
+const historyBtn = document.getElementById("historyBtn");
+const historyBox = document.getElementById("historyBox");
 
 imageInput.addEventListener("change", () => {
 
@@ -24,6 +30,7 @@ imageInput.addEventListener("change", () => {
     previewContainer.style.display = "block";
 
 });
+
 button.addEventListener("click", async () => {
 
     const question = textarea.value.trim();
@@ -33,7 +40,9 @@ button.addEventListener("click", async () => {
         answer.innerHTML = "Please enter a question or upload an image.";
         return;
     }
-const startTime = Date.now();
+
+    const startTime = Date.now();
+
     answer.innerHTML = `
 <div class="loader"></div>
 <p>🤖 AI is analyzing your question...</p>
@@ -47,61 +56,85 @@ const startTime = Date.now();
 
     try {
 
-        const response = await fetch("https://mathhelper-rose.vercel.app/api/solve", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-    question,
-    image,
-    mode: mode.value,
-    grade: grade.value,
-subject: subject.value,
-studentName: studentName.value
-            })
-        });
+        const response = await fetch(
+            "https://mathhelper-rose.vercel.app/api/solve",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    question,
+                    image,
+                    mode: mode.value,
+                    grade: grade.value,
+                    subject: subject.value,
+                    studentName: studentName.value
+                })
+            }
+        );
 
         const data = await response.json();
 
         if (data.answer) {
-          const history = JSON.parse(localStorage.getItem("mathHistory")) || [];
 
-history.unshift({
-    question,
-    answer: data.answer,
-    time: new Date().toLocaleString()
-});
-localStorage.setItem("lastAnswer", data.answer);
-localStorage.setItem("mathHistory", JSON.stringify(history.slice(0, 20))); 
-       answer.innerHTML =
-    data.answer.replace(/\n/g, "<br>") +
-    `<br><br><small>⚡ Solved in ${((endTime - startTime) / 1000).toFixed(2)} seconds</small>`; 
+            const endTime = Date.now();
 
-          const endTime = Date.now();
+            const history =
+                JSON.parse(localStorage.getItem("mathHistory")) || [];
+
+            history.unshift({
+                question,
+                answer: data.answer,
+                time: new Date().toLocaleString()
+            });
+
+            localStorage.setItem(
+                "mathHistory",
+                JSON.stringify(history.slice(0, 20))
+            );
+
+            localStorage.setItem("lastAnswer", data.answer);
+
+            answer.innerHTML =
+                data.answer.replace(/\n/g, "<br>") +
+                `<br><br><small>⚡ Solved in ${(
+                    (endTime - startTime) / 1000
+                ).toFixed(2)} seconds</small>`;
+
             renderMathInElement(answer, {
-    delimiters: [
-        { left: "$$", right: "$$", display: true },
-        { left: "$", right: "$", display: false }
-    ],
-    throwOnError: false
-});
+                delimiters: [
+                    { left: "$$", right: "$$", display: true },
+                    { left: "$", right: "$", display: false }
+                ],
+                throwOnError: false
+            });
+
         } else {
-           if (data.error?.code === 429) {
-    answer.innerHTML = "⚠️ Daily AI limit reached. Please try again later.";
-} else {
-    answer.innerHTML = "❌ " + (data.error?.message || "Unknown error");
-           } 
+
+            if (data.error?.code === 429) {
+                answer.innerHTML =
+                    "⚠️ Daily AI limit reached. Please try again later.";
+            } else {
+                answer.innerHTML =
+                    "❌ " +
+                    (data.error?.message || "Unknown error");
+            }
+
         }
 
     } catch (err) {
+
         answer.innerHTML = "❌ " + err.message;
+
     }
 
 });
 
 function toBase64(file) {
+
     return new Promise((resolve, reject) => {
+
         const reader = new FileReader();
 
         reader.onload = () => {
@@ -111,41 +144,50 @@ function toBase64(file) {
         reader.onerror = reject;
 
         reader.readAsDataURL(file);
+
     });
+
 }
-const historyBtn = document.getElementById("historyBtn");
-const historyBox = document.getElementById("historyBox");
 
 historyBtn.addEventListener("click", () => {
 
-    const history = JSON.parse(localStorage.getItem("mathHistory")) || [];
+    const history =
+        JSON.parse(localStorage.getItem("mathHistory")) || [];
 
     historyBox.innerHTML = "";
 
     history.forEach(item => {
 
         historyBox.innerHTML += `
-        <div class="history-item">
-            <strong>${item.question}</strong><br>
-            <small>${item.time}</small>
-        </div>`;
+<div class="history-item">
+<strong>${item.question}</strong><br>
+<small>${item.time}</small>
+</div>
+`;
+
     });
 
     historyBox.style.display =
         historyBox.style.display === "none"
-        ? "block"
-        : "none";
+            ? "block"
+            : "none";
+
 });
+
 clearBtn.addEventListener("click", () => {
 
     textarea.value = "";
     imageInput.value = "";
+    followUp.value = "";
 
     previewContainer.style.display = "none";
     previewImage.src = "";
 
-    answer.innerHTML = "Your step-by-step solution will appear here...";
+    answer.innerHTML =
+        "Your step-by-step solution will appear here...";
+
 });
+
 copyBtn.addEventListener("click", async () => {
 
     const text = answer.innerText.trim();
@@ -164,41 +206,78 @@ copyBtn.addEventListener("click", async () => {
     }, 2000);
 
 });
-pdfBtn.addEventListener("click", () => {
-askBtn.addEventListener("click", async() => {
-const lastAnswer = localStorage.getItem("lastAnswer");
+
+askBtn.addEventListener("click", async () => {
+
+    const lastAnswer = localStorage.getItem("lastAnswer");
+
     if (!followUp.value.trim()) {
         alert("Please type a follow-up question.");
         return;
     }
-if (!lastAnswer) {
-    alert("Please solve a question first.");
-    return;
-}
-   const followUpQuestion = followUp.value.trim();
-    answer.innerHTML += `<hr><p><strong>💬 Your Question:</strong> ${followUpQuestion}</p>`;
-answer.innerHTML += "<p>🤖 AI is thinking...</p>";
-const response = await fetch("https://mathhelper-rose.vercel.app/api/solve", {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-        followUpQuestion,
-        lastAnswer,
-        subject: subject.value,
-        grade: grade.value
-    })
-});
-const data = await response.json();
 
-if (data.answer) {
-    answer.innerHTML += `<p><strong>🤖 AI:</strong></p>`;
-    answer.innerHTML += data.answer.replace(/\n/g, "<br>");
-} else {
-    answer.innerHTML += `<p>❌ ${data.error?.message || "Unable to answer."}</p>`;
-}
-   });
+    if (!lastAnswer) {
+        alert("Please solve a question first.");
+        return;
+    }
+
+    const followUpQuestion = followUp.value.trim();
+
+    answer.innerHTML += `<hr><p><strong>💬 Your Question:</strong> ${followUpQuestion}</p>`;
+    answer.innerHTML += `<p>🤖 AI is thinking...</p>`;
+
+    try {
+
+        const response = await fetch(
+            "https://mathhelper-rose.vercel.app/api/solve",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    followUpQuestion,
+                    lastAnswer,
+                    subject: subject.value,
+                    grade: grade.value
+                })
+            }
+        );
+
+        const data = await response.json();
+
+        if (data.answer) {
+
+            answer.innerHTML += `
+<hr>
+<p><strong>🤖 AI Reply:</strong></p>
+${data.answer.replace(/\n/g, "<br>")}
+`;
+
+            renderMathInElement(answer, {
+                delimiters: [
+                    { left: "$$", right: "$$", display: true },
+                    { left: "$", right: "$", display: false }
+                ],
+                throwOnError: false
+            });
+
+        } else {
+
+            answer.innerHTML += `<p>❌ ${data.error?.message || "Unable to answer."}</p>`;
+
+        }
+
+    } catch (err) {
+
+        answer.innerHTML += `<p>❌ ${err.message}</p>`;
+
+    }
+
+});
+
+pdfBtn.addEventListener("click", () => {
+
     const text = answer.innerText.trim();
 
     if (!text) {
