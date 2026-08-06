@@ -175,8 +175,9 @@ if (!lastAnswer) {
     alert("Please solve a question first.");
     return;
 }
-    answer.innerHTML += `<hr><p><strong>💬 Your Question:</strong> ${followUp.value}</p>`;
-const followUpQuestion = followUp.value.trim();
+   const followUpQuestion = followUp.value.trim();
+    answer.innerHTML += `<hr><p><strong>💬 Your Question:</strong> ${followUpQuestion}</p>`;
+answer.innerHTML += "<p>🤖 AI is thinking...</p>";
 });
     const text = answer.innerText.trim();
 
