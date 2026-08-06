@@ -178,6 +178,18 @@ if (!lastAnswer) {
    const followUpQuestion = followUp.value.trim();
     answer.innerHTML += `<hr><p><strong>💬 Your Question:</strong> ${followUpQuestion}</p>`;
 answer.innerHTML += "<p>🤖 AI is thinking...</p>";
+const response = await fetch("https://mathhelper-rose.vercel.app/api/solve", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        followUpQuestion,
+        lastAnswer,
+        subject: subject.value,
+        grade: grade.value
+    })
+});
 });
     const text = answer.innerText.trim();
 
