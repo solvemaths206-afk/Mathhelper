@@ -11,7 +11,9 @@ if (req.method === "OPTIONS") {
   }
 
   try {
-  const { question, image, mode, grade, subject, studentName } = req.body;  
+  const { question, image, mode, grade, subject, studentName ,
+    followUpQuestion,
+    lastAnswer} = req.body;  
 console.log("Subject:", subject);
 console.log("Grade:", grade);
    let prompt = "";
