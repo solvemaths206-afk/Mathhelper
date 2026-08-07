@@ -1,17 +1,18 @@
 :root {
-    --primary-color: #0d9488;      /* Deep Teal */
-    --primary-hover: #0f766e;      /* Darker Forest Teal */
-    --accent-color: #14b8a6;       /* Bright Mint Teal */
-    --accent-hover: #0d9488;       
-    --cta-gold: #f59e0b;           /* Warm Amber Gold Accent */
-    --cta-gold-hover: #d97706;
-    --bg-light: #f0fdfa;           /* Soft Mint Background */
+    --primary-color: #09090b;      /* Pure Charcoal Black */
+    --primary-hover: #27272a;      /* Dark Grey Hover */
+    --accent-color: #3f3f46;       /* Neutral Grey Accent */
+    --accent-hover: #18181b;       
+    --cta-gold: #09090b;           /* Black Main Button */
+    --cta-gold-hover: #27272a;
+    --bg-light: #f4f4f5;           /* Clean Soft Grey Background */
     --card-bg: #ffffff;            /* Pure White Cards */
-    --text-dark: #134e4a;          /* Dark Teal Headings */
-    --text-body: #334155;          /* Easy-to-read Body Text */
-    --text-light: #ccfbf1;         
-    --border-color: #99f6e4;       /* Mint Border */
+    --text-dark: #09090b;          /* Black Text */
+    --text-body: #27272a;          /* Dark Grey Body Text */
+    --text-light: #fafafa;         
+    --border-color: #e4e4e7;       /* Subtle Border */
 }
+
 
 
 
