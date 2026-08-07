@@ -1,17 +1,18 @@
 :root {
-    --primary-color: #2563eb;      /* Classic Royal Blue */
-    --primary-hover: #1d4ed8;      /* Deep Blue */
-    --accent-color: #3b82f6;       /* Clean Light Blue */
-    --accent-hover: #1d4ed8;       
-    --cta-gold: #2563eb;           /* Professional Blue for main buttons */
-    --cta-gold-hover: #1d4ed8;
-    --bg-light: #fafafa;           /* Minimal Soft Off-White Background */
-    --card-bg: #ffffff;            /* Pure Crisp White Cards */
-    --text-dark: #18181b;          /* Soft Black Headings */
-    --text-body: #3f3f46;          /* Charcoal Body Text */
-    --text-light: #f4f4f5;         
-    --border-color: #e4e4e7;       /* Subtle Minimalist Border */
+    --primary-color: #ea580c;      /* Warm Sunset Orange */
+    --primary-hover: #c2410c;      /* Deep Terracotta */
+    --accent-color: #f59e0b;       /* Bright Amber */
+    --accent-hover: #d97706;       
+    --cta-gold: #f59e0b;           /* Amber Gold for main buttons */
+    --cta-gold-hover: #d97706;
+    --bg-light: #fff7ed;           /* Soft Warm Peach Background */
+    --card-bg: #ffffff;            /* Crisp White Cards */
+    --text-dark: #431407;          /* Dark Chocolate Headings */
+    --text-body: #334155;          /* Slate Body Text */
+    --text-light: #ffedd5;         
+    --border-color: #fed7aa;       /* Soft Peach Border */
 }
+
 
 
 
