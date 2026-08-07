@@ -665,3 +665,26 @@ button:active, .upload-btn:active {
     padding-left: 16px;
     padding-right: 16px;
 }
+/* Math Toolbar Buttons Style */
+.math-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.math-toolbar button {
+    background-color: #f1f5f9 !important;
+    color: #0f172a !important;
+    border: 1px solid #cbd5e1 !important;
+    padding: 8px 14px !important;
+    border-radius: 6px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    cursor: pointer;
+}
+
+.math-toolbar button:hover {
+    background-color: #e2e8f0 !important;
+    border-color: #94a3b8 !important;
+}
