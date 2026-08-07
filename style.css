@@ -568,3 +568,43 @@ textarea#questionInput {
     color: #111827 !important;
     border: 1px solid #d1d5db !important;
 }
+/* FIX BUTTON CONTRAST & VISIBILITY */
+#solveBtn, 
+.follow-up-box button, 
+.cta button {
+    background-color: #000000 !important;
+    color: #ffffff !important; /* Forces crisp white text on black buttons */
+    font-weight: 600 !important;
+}
+
+/* FIX SECONDARY BUTTONS (Copy, Download PDF, History) */
+.post-solve-actions button, 
+#historyBtn {
+    background-color: #f1f5f9 !important;
+    color: #0f172a !important;
+    border: 1px solid #cbd5e1 !important;
+}
+
+.post-solve-actions button:hover, 
+#historyBtn:hover {
+    background-color: #e2e8f0 !important;
+}
+
+/* FIX HEADER PADDING & LOGO */
+header {
+    padding: 16px 0 !important;
+}
+
+.logo {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+/* ADD DEFINITION TO CARDS & INPUTS */
+textarea#questionInput, 
+.answer-box, 
+.feature-card, 
+.step {
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
+}
