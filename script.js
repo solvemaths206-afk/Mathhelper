@@ -283,3 +283,17 @@ pdfBtn.addEventListener("click", () => {
     doc.save("MathHelper-Solution.pdf");
 });
         
+// Function to insert math symbols into textarea at cursor position
+function insertMath(symbol) {
+    const input = document.getElementById('questionInput');
+    const start = input.selectionStart;
+    const end = input.selectionEnd;
+    const text = input.value;
+
+    // Insert symbol at cursor position
+    input.value = text.substring(0, start) + symbol + text.substring(end);
+
+    // Move cursor right after the inserted symbol
+    input.selectionStart = input.selectionEnd = start + symbol.length;
+    input.focus();
+}
