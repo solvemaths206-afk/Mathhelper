@@ -1,18 +1,18 @@
 :root {
-    --primary-color: #0d0d0d;      /* Deep Rich Black */
-    --primary-hover: #1a1a1a;      /* Dark Charcoal Hover */
-    --accent-color: #d4af37;       /* Metallic Premium Gold */
-    --accent-hover: #b89628;       /* Muted Gold Hover */
-    --cta-gold: #f59e0b;           /* Warm Vivid Gold for Main Buttons */
-    --cta-gold-hover: #d97706;     /* Darker Gold Accent */
-    --bg-light: #121212;           /* Dark Studio Background */
-    --card-bg: #1a1a1a;            /* Dark Card Background */
-    --text-dark: #f5f5f7;          /* Bright Off-White Headings */
-    --text-body: #d1d5db;          /* Crisp Light Slate Body Text */
-    --text-muted: #9ca3af;         /* Soft Muted Grey Text */
-    --border-color: #2a2a2a;       /* Subtle Dark Border */
-    --gold-border: #3d3113;        /* Dark Metallic Gold Outline */
+    --primary-color: #0f172a;      /* Header & Primary buttons */
+    --primary-hover: #1e293b;
+    --accent-gold: #c5a059;        /* Highlights & Main Action buttons */
+    --accent-gold-hover: #b08d46;
+    --bg-light: #f8fafc;           /* Main Background */
+    --card-bg: #ffffff;            /* Card Background */
+    --text-dark: #0f172a;          /* Headings */
+    --text-body: #334155;          /* Normal Text */
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;       /* Card Borders */
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
 }
+
 
 * {
     margin: 0;
