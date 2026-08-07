@@ -688,3 +688,15 @@ button:active, .upload-btn:active {
     background-color: #e2e8f0 !important;
     border-color: #94a3b8 !important;
 }
+/* Urdu Font Support */
+.math-toolbar button:nth-last-child(-n+2) {
+    background-color: #fef3c7 !important;
+    border-color: #f59e0b !important;
+    color: #92400e !important;
+}
+
+textarea#questionInput:lang(ur),
+textarea#questionInput[placeholder*="اردو"] {
+    font-family: 'Noto Nastaliq Urdu', 'Segoe UI', Tahoma, sans-serif;
+    direction: ltr; /* Keeps math expressions correctly ordered */
+}
