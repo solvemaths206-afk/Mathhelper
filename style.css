@@ -1,16 +1,17 @@
+
 :root {
-    --primary-color: #7c3aed;      /* Royal Violet */
-    --primary-hover: #6d28d9;      /* Deep Purple */
-    --accent-color: #a855f7;       /* Bright Purple Accent */
-    --accent-hover: #9333ea;       /* Vibrant Violet */
-    --cta-gold: #f59e0b;           /* Amber Gold for Main Button */
+    --primary-color: #1e293b;      /* Slate Charcoal */
+    --primary-hover: #0f172a;      /* Deep Dark Charcoal */
+    --accent-color: #3b82f6;       /* Clean Tech Blue Accent */
+    --accent-hover: #2563eb;       /* Darker Blue */
+    --cta-gold: #f59e0b;           /* Warm Amber Gold for Solve Button */
     --cta-gold-hover: #d97706;
-    --bg-light: #faf5ff;           /* Soft Lavender Background */
-    --card-bg: #ffffff;            /* Pure White Cards */
-    --text-dark: #3b0764;          /* Dark Purple Headings */
-    --text-body: #334155;          /* Clean Dark Slate Text */
-    --text-light: #f3e8ff;         /* Light Lavender Text */
-    --border-color: #e9d5ff;       /* Soft Purple Border */
+    --bg-light: #f8fafc;           /* Pure Off-White Background */
+    --card-bg: #ffffff;            /* Crisp White Cards */
+    --text-dark: #0f172a;          /* Charcoal Black Headings */
+    --text-body: #334155;          /* Easy-to-read Slate Text */
+    --text-light: #f1f5f9;         /* Soft Off-White Text */
+    --border-color: #e2e8f0;       /* Subtle Grey Border */
 }
 
 
