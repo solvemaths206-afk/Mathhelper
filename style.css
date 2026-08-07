@@ -1,20 +1,17 @@
 :root {
-    --primary-color: #2563EB;      /* Primary Blue */
-    --primary-hover: #1d4ed8;      /* Darker Blue */
-    --secondary-color: #7C3AED;    /* Secondary Purple */
-    --secondary-hover: #6d28d9;    /* Darker Purple */
-    --accent-color: #F59E0B;       /* Accent Yellow/Gold */
-    --accent-hover: #d97706;       
-    --success-color: #22C55E;      /* Success Green (Correct Answer) */
-    --error-color: #EF4444;        /* Error Red */
-    --bg-light: #F8FAFC;           /* Off-White Background */
-    --card-bg: #FFFFFF;            /* Pure White Cards */
-    --text-dark: #111827;          /* Headings & Dark Text */
-    --text-body: #111827;          /* Body Text */
-    --text-muted: #6b7280;         /* Muted Subtitle Text */
-    --border-color: #E5E7EB;       /* Light Grey Border */
+    --primary-color: #09090b;      /* Pure Charcoal Black */
+    --primary-hover: #27272a;      /* Dark Grey Hover */
+    --accent-color: #3f3f46;       /* Neutral Grey Accent */
+    --accent-hover: #18181b;       
+    --cta-gold: #09090b;           /* Black Main Button */
+    --cta-gold-hover: #27272a;
+    --bg-light: #f4f4f5;           /* Clean Soft Grey Background */
+    --card-bg: #ffffff;            /* Pure White Cards */
+    --text-dark: #09090b;          /* Black Text */
+    --text-body: #27272a;          /* Dark Grey Body Text */
+    --text-light: #fafafa;         
+    --border-color: #e4e4e7;       /* Subtle Border */
 }
-
 
 
 * {
