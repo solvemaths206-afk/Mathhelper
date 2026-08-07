@@ -1,17 +1,18 @@
 :root {
-    --primary-color: #059669;      /* Fresh Emerald Green */
-    --primary-hover: #047857;      /* Dark Emerald Green */
-    --accent-color: #10b981;       /* Bright Mint Accent */
-    --accent-hover: #059669;       /* Darker Mint Accent */
-    --cta-gold: #f59e0b;           /* Warm Amber/Gold for Solve Button */
+    --primary-color: #7c3aed;      /* Royal Violet */
+    --primary-hover: #6d28d9;      /* Deep Purple */
+    --accent-color: #a855f7;       /* Bright Purple Accent */
+    --accent-hover: #9333ea;       /* Vibrant Violet */
+    --cta-gold: #f59e0b;           /* Amber Gold for Main Button */
     --cta-gold-hover: #d97706;
-    --bg-light: #f0fdf4;           /* Soft Light Mint Background */
+    --bg-light: #faf5ff;           /* Soft Lavender Background */
     --card-bg: #ffffff;            /* Pure White Cards */
-    --text-dark: #064e3b;          /* Dark Forest Green Text */
-    --text-body: #1e293b;          /* Readable Slate Body Text */
-    --text-light: #ecfdf5;         /* Light Greenish Tint Text */
-    --border-color: #a7f3d0;       /* Soft Emerald Border */
+    --text-dark: #3b0764;          /* Dark Purple Headings */
+    --text-body: #334155;          /* Clean Dark Slate Text */
+    --text-light: #f3e8ff;         /* Light Lavender Text */
+    --border-color: #e9d5ff;       /* Soft Purple Border */
 }
+
 
 
 * {
