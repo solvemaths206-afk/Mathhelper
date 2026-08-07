@@ -1,19 +1,17 @@
 :root {
-    --primary-color: #1e1e2e;      /* Deep Dark Slate */
-    --primary-hover: #181825;      /* Darker Slate Header/Footer */
-    --accent-color: #00e5ff;       /* Neon Cyan Accent */
-    --accent-hover: #00b8d4;       
-    --cta-gold: #00e5ff;           /* Bright Neon Cyan for main buttons */
-    --cta-gold-hover: #00b8d4;
-    --bg-light: #121218;           /* Pure Dark Background */
-    --card-bg: #1e1e2e;            /* Dark Card Background */
-    --text-dark: #f8fafc;          /* Crisp White Headings */
-    --text-body: #cbd5e1;          /* Soft Light Grey Body Text */
-    --text-light: #94a3b8;         /* Muted Grey Text */
-    --border-color: #313244;       /* Subtle Dark Border */
+    --primary-color: #2563eb;      /* Classic Royal Blue */
+    --primary-hover: #1d4ed8;      /* Deep Blue */
+    --accent-color: #3b82f6;       /* Clean Light Blue */
+    --accent-hover: #1d4ed8;       
+    --cta-gold: #2563eb;           /* Professional Blue for main buttons */
+    --cta-gold-hover: #1d4ed8;
+    --bg-light: #fafafa;           /* Minimal Soft Off-White Background */
+    --card-bg: #ffffff;            /* Pure Crisp White Cards */
+    --text-dark: #18181b;          /* Soft Black Headings */
+    --text-body: #3f3f46;          /* Charcoal Body Text */
+    --text-light: #f4f4f5;         
+    --border-color: #e4e4e7;       /* Subtle Minimalist Border */
 }
-
-
 
 
 
