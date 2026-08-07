@@ -1,17 +1,18 @@
 :root {
-    --primary-color: #4f46e5;      /* Deep Indigo */
-    --primary-hover: #4338ca;      /* Darker Indigo */
-    --accent-color: #06b6d4;       /* Bright Cyan */
-    --accent-hover: #0891b2;       /* Dark Cyan */
-    --cta-gold: #f59e0b;           /* Amber Gold for main action buttons */
+    --primary-color: #059669;      /* Fresh Emerald Green */
+    --primary-hover: #047857;      /* Dark Emerald Green */
+    --accent-color: #10b981;       /* Bright Mint Accent */
+    --accent-hover: #059669;       /* Darker Mint Accent */
+    --cta-gold: #f59e0b;           /* Warm Amber/Gold for Solve Button */
     --cta-gold-hover: #d97706;
-    --bg-light: #f8fafc;           /* Light slate background */
-    --card-bg: #ffffff;            /* White card background */
-    --text-dark: #0f172a;          /* Main headings text */
-    --text-body: #334155;          /* Subtitles & body text */
-    --text-light: #f1f5f9;         /* Light text for dark sections */
-    --border-color: #e2e8f0;       /* Soft borders */
+    --bg-light: #f0fdf4;           /* Soft Light Mint Background */
+    --card-bg: #ffffff;            /* Pure White Cards */
+    --text-dark: #064e3b;          /* Dark Forest Green Text */
+    --text-body: #1e293b;          /* Readable Slate Body Text */
+    --text-light: #ecfdf5;         /* Light Greenish Tint Text */
+    --border-color: #a7f3d0;       /* Soft Emerald Border */
 }
+
 
 * {
     margin: 0;
