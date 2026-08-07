@@ -513,3 +513,58 @@ footer {
         flex-direction: column;
     }
 }
+/* FORCED BLACK & WHITE OVERRIDES */
+
+/* Header & Navigation Fixes */
+header {
+    background-color: #000000 !important;
+}
+
+.logo, header .logo {
+    color: #ffffff !important;
+}
+
+nav a {
+    color: #ffffff !important;
+    opacity: 0.9;
+}
+
+/* Page Background & Section Overrides */
+body, .hero, section {
+    background-color: #f8fafc !important;
+    background-image: none !important;
+    color: #111827 !important;
+}
+
+.hero h1, .hero p {
+    color: #111827 !important;
+}
+
+/* Inputs & Forms */
+.input-group input, 
+.input-group select, 
+.options-group select,
+textarea#questionInput {
+    background-color: #ffffff !important;
+    color: #111827 !important;
+    border: 1px solid #d1d5db !important;
+}
+
+/* Buttons */
+.upload-btn {
+    background-color: #ffffff !important;
+    color: #111827 !important;
+    border: 1px dashed #9ca3af !important;
+}
+
+#solveBtn {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border: none !important;
+}
+
+#clearBtn {
+    background-color: #ffffff !important;
+    color: #111827 !important;
+    border: 1px solid #d1d5db !important;
+}
