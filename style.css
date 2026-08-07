@@ -1,18 +1,18 @@
-
 :root {
-    --primary-color: #1e293b;      /* Slate Charcoal */
-    --primary-hover: #0f172a;      /* Deep Dark Charcoal */
-    --accent-color: #3b82f6;       /* Clean Tech Blue Accent */
-    --accent-hover: #2563eb;       /* Darker Blue */
-    --cta-gold: #f59e0b;           /* Warm Amber Gold for Solve Button */
-    --cta-gold-hover: #d97706;
-    --bg-light: #f8fafc;           /* Pure Off-White Background */
-    --card-bg: #ffffff;            /* Crisp White Cards */
-    --text-dark: #0f172a;          /* Charcoal Black Headings */
-    --text-body: #334155;          /* Easy-to-read Slate Text */
-    --text-light: #f1f5f9;         /* Soft Off-White Text */
-    --border-color: #e2e8f0;       /* Subtle Grey Border */
+    --primary-color: #0284c7;      /* Sky Ocean Blue */
+    --primary-hover: #0369a1;      /* Darker Ocean Blue */
+    --accent-color: #0d9488;       /* Teal Accent */
+    --accent-hover: #0f766e;       
+    --cta-gold: #ff6b6b;           /* Vibrant Coral for main buttons */
+    --cta-gold-hover: #ee5253;
+    --bg-light: #f0f9ff;           /* Light Sky Background */
+    --card-bg: #ffffff;            /* Pure White Cards */
+    --text-dark: #0c4a6e;          /* Dark Navy Headings */
+    --text-body: #334155;          /* Slate Body Text */
+    --text-light: #e0f2fe;         
+    --border-color: #bae6fd;       /* Soft Blue Border */
 }
+
 
 
 
