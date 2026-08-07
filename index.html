@@ -9,7 +9,11 @@
     <meta name="description" content="Solve mathematics problems instantly with AI. Get step-by-step explanations in English and Urdu.">
 
     <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+    
+    <!-- KaTeX CSS & JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
 </head>
 <body>
 
@@ -29,62 +33,78 @@
     <div class="hero-content">
         <h1>Solve Math with AI</h1>
 
-        <p>
-            Type any mathematics question and receive clear, step-by-step solutions in seconds.
-     
-        </p>
-<input type="text" id="studentName" placeholder="Enter your name">
-        <select id="grade">
-    <option value="Grade 9">Grade 9</option>
-    <option value="Grade 10">Grade 10</option>
-    <option value="FSc">FSc</option>
-    <option value="O Level">O Level</option>
-    <option value="A Level">A Level</option>
-</select>
-      <select id="subject">
-    <option value="Mathematics">📘 Mathematics</option>
-    <option value="Physics">⚛️ Physics</option>
-    <option value="Chemistry">🧪 Chemistry</option>
-      </select>
-        <textarea placeholder="Example: Solve 2x + 5 = 17"></textarea>
-<div class="image-upload">
-    <input type="file" id="imageInput" accept="image/*" capture="environment">
+        <p>Type any mathematics question and receive clear, step-by-step solutions in seconds.</p>
 
-<div id="previewContainer">
-    <img id="previewImage" alt="Preview">
-</div>
-</div>
-        <br>
-<select id="mode">
-    <option value="teacher">👨‍🏫 Explain Like a Teacher</option>
-    <option value="exam">📝 Exam Mode</option>
-    <option value="quick">⚡ Quick Answer</option>
-    <option value="practice">📖 Generate Practice Questions</option>
-</select>
-        <button id="solveBtn">Solve Now</button>
-  <button id="clearBtn">Clear</button>
+        <div class="input-group">
+            <input type="text" id="studentName" placeholder="Enter your name">
+            
+            <select id="grade">
+                <option value="Grade 9">Grade 9</option>
+                <option value="Grade 10">Grade 10</option>
+                <option value="FSc">FSc</option>
+                <option value="O Level">O Level</option>
+                <option value="A Level">A Level</option>
+            </select>
+
+            <select id="subject">
+                <option value="Mathematics">📘 Mathematics</option>
+                <option value="Physics">⚛️ Physics</option>
+                <option value="Chemistry">🧪 Chemistry</option>
+            </select>
+        </div>
+
+        <textarea id="questionInput" placeholder="Example: Solve 2x + 5 = 17"></textarea>
+
+        <div class="image-upload">
+            <label for="imageInput" class="upload-btn">📷 Upload or Snap Problem Image</label>
+            <input type="file" id="imageInput" accept="image/*" capture="environment">
+
+            <div id="previewContainer">
+                <img id="previewImage" alt="Preview">
+            </div>
+        </div>
+
+        <div class="options-group">
+            <select id="mode">
+                <option value="teacher">👨‍🏫 Explain Like a Teacher</option>
+                <option value="exam">📝 Exam Mode</option>
+                <option value="quick">⚡ Quick Answer</option>
+                <option value="practice">📖 Generate Practice Questions</option>
+            </select>
+        </div>
+
+        <div class="action-btns">
+            <button id="solveBtn">Solve Now</button>
+            <button id="clearBtn">Clear</button>
+        </div>
+
         <div id="answerBox" class="answer-box">
-<button id="historyBtn">📚 History</button>
+            <button id="historyBtn">📚 History</button>
 
-<div id="historyBox" style="display:none;"></div>
-    <h2>Solution</h2>
+            <div id="historyBox" style="display:none;"></div>
+            
+            <h2>Solution</h2>
 
-    <div id="answer" class="answer-card">
-    Your step-by-step solution will appear here...
-    </div>
-<button id="copyBtn">📋 Copy Answer</button>
-<input type="text" id="followUp" placeholder="Ask a follow-up question...">
-<button id="askBtn">💬 Ask AI</button>
-            <button id="pdfBtn">📄 Download PDF</button>
+            <div id="answer" class="answer-card">
+                Your step-by-step solution will appear here...
+            </div>
+
+            <div class="post-solve-actions">
+                <button id="copyBtn">📋 Copy Answer</button>
+                <button id="pdfBtn">📄 Download PDF</button>
+            </div>
+
+            <div class="follow-up-box">
+                <input type="text" id="followUp" placeholder="Ask a follow-up question...">
+                <button id="askBtn">💬 Ask AI</button>
+            </div>
         </div>
     </div>
 </section>
+
 <section class="features">
-
     <h2>Why Choose MathHelper AI?</h2>
-
     <div class="feature-grid">
-
         <div class="feature-card">
             <h3>🧠 AI Explanations</h3>
             <p>Understand every step, not just the final answer.</p>
@@ -99,16 +119,12 @@
             <h3>⚡ Instant Answers</h3>
             <p>Get solutions within seconds, anytime.</p>
         </div>
-
     </div>
-
 </section>
-  <section class="how-it-works">
 
+<section class="how-it-works">
     <h2>How It Works</h2>
-
     <div class="steps">
-
         <div class="step">
             <div class="number">1</div>
             <h3>Type Your Question</h3>
@@ -126,25 +142,17 @@
             <h3>Learn & Practice</h3>
             <p>Understand the explanation and improve your math skills.</p>
         </div>
-
     </div>
+</section>
 
-  </section>
-  <section class="cta">
-
+<section class="cta">
     <h2>Ready to Solve Your First Math Problem?</h2>
-
-    <p>
-        Join thousands of students learning mathematics with AI.
-    </p>
-
+    <p>Join thousands of students learning mathematics with AI.</p>
     <button>Start Solving for Free</button>
+</section>
 
-  </section>
-  <section class="faq">
-
+<section class="faq">
     <h2>Frequently Asked Questions</h2>
-
     <div class="faq-item">
         <h3>Is MathHelper AI free?</h3>
         <p>Yes! The basic version is completely free to use.</p>
@@ -159,16 +167,13 @@
         <h3>Will I get step-by-step explanations?</h3>
         <p>Absolutely! We explain every step so you can understand the solution, not just copy the answer.</p>
     </div>
+</section>
 
-  </section>
 <footer>
-
     <p>© 2026 MathHelper AI. All Rights Reserved.</p>
-
 </footer>
-<script src="script.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
