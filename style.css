@@ -1,17 +1,19 @@
 :root {
-    --primary-color: #0f172a;      /* Header & Primary buttons */
-    --primary-hover: #1e293b;
-    --accent-gold: #c5a059;        /* Highlights & Main Action buttons */
-    --accent-gold-hover: #b08d46;
-    --bg-light: #f8fafc;           /* Main Background */
-    --card-bg: #ffffff;            /* Card Background */
-    --text-dark: #0f172a;          /* Headings */
-    --text-body: #334155;          /* Normal Text */
-    --text-muted: #64748b;
-    --border-color: #e2e8f0;       /* Card Borders */
-    --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
-    --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    --primary-color: #2563EB;      /* Primary Blue */
+    --primary-hover: #1d4ed8;      /* Darker Blue */
+    --accent-color: #7C3AED;       /* Secondary Purple */
+    --accent-hover: #6d28d9;       /* Darker Purple */
+    --cta-gold: #F59E0B;           /* Accent Gold/Yellow */
+    --cta-gold-hover: #d97706;     
+    --success-color: #22C55E;      /* Success Green */
+    --bg-light: #F8FAFC;           /* Off-White Background */
+    --card-bg: #ffffff;            /* Pure White Cards */
+    --text-dark: #111827;          /* Dark Text */
+    --text-body: #111827;          /* Body Text */
+    --text-muted: #6b7280;         /* Muted Subtitle Text */
+    --border-color: #e5e7eb;       /* Light Grey Border */
 }
+
 
 
 * {
